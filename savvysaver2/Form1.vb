@@ -5,7 +5,8 @@ Imports Microsoft.Data.SqlClient
 Public Class Form1
     ' SQL Server connection
     Dim con As New SqlConnection("Data Source=CHIDAMBARAM-LAP\SQLEXPRESS01;Initial Catalog=Comparison;Integrated Security=True;TrustServerCertificate=True")
-    ' LOGIN BUTTON (Guna2GradientButton2)
+
+    ' LOGIN BUTTON (Guna2GradientButton1)
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
         Dim userType As String = Guna2ComboBox1.SelectedItem
         Dim username = Guna2TextBox1.Text.Trim
@@ -16,12 +17,19 @@ Public Class Form1
             Exit Sub
         End If
 
+        ' Password Length Validation
+        If password.Length < 8 Then
+            MessageBox.Show("Password must be at least 8 characters long.", "Weak Password", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
         ' ==== Admin Login ====
         If userType = "Admin" Then
             If username = "admin" And password = "admin123" Then
                 MessageBox.Show("Admin Login Successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Hide()
-
+                dashboard.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("Invalid Admin credentials.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -40,7 +48,8 @@ Public Class Form1
                 If count > 0 Then
                     MessageBox.Show("Customer Login Successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Hide()
-
+                    COMPARE.Show()
+                    Me.Hide()
                 Else
                     MessageBox.Show("Invalid Customer credentials.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -54,12 +63,30 @@ Public Class Form1
         End If
     End Sub
 
+    ' REGISTER BUTTON (Guna2GradientButton2)
     Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
-        Dim reg As New Vendor()
+        Dim reg As New Registration()
         reg.Show()
         Me.Hide()
     End Sub
 
-    ' CANCEL BUTTON (Guna2GradientButton4)
+    ' FORM LOAD
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblCapsWarning.Visible = False ' Hide on load
+    End Sub
+
+    ' EXIT LINK
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Application.Exit()
+    End Sub
+
+    ' CAPS LOCK DETECTION
+    Private Sub Guna2TextBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles Guna2TextBox2.KeyDown
+        lblCapsWarning.Visible = Control.IsKeyLocked(Keys.CapsLock)
+    End Sub
+
+    Private Sub Guna2TextBox2_KeyUp(sender As Object, e As KeyEventArgs) Handles Guna2TextBox2.KeyUp
+        lblCapsWarning.Visible = Control.IsKeyLocked(Keys.CapsLock)
+    End Sub
 
 End Class

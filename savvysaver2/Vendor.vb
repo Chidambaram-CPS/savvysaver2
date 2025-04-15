@@ -4,7 +4,9 @@ Imports Microsoft.Data.SqlClient
 Public Class Vendor
 
     Dim con As New SqlConnection("Data Source=CHIDAMBARAM-LAP\SQLEXPRESS01;Initial Catalog=Comparison;Integrated Security=True;TrustServerCertificate=True")
-
+    Private Sub Vendor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' You can leave it empty if not needed, or put initialization code here.
+    End Sub
     ' Save New Vendor (Button 1)
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
         Try
@@ -73,5 +75,19 @@ Public Class Vendor
         Finally
             con.Close()
         End Try
+    End Sub
+
+    Private Sub PRODUCTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PRODUCTToolStripMenuItem.Click
+        Product.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub LOGOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOGOUTToolStripMenuItem.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub CLOSEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CLOSEToolStripMenuItem.Click
+        Application.Exit()
     End Sub
 End Class

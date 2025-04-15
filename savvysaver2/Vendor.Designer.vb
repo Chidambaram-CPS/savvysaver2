@@ -40,6 +40,7 @@ Partial Class Vendor
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Vendor))
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -49,7 +50,14 @@ Partial Class Vendor
         Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2GradientButton3 = New Guna.UI2.WinForms.Guna2GradientButton()
+        MenuStrip1 = New MenuStrip()
+        PRODUCTToolStripMenuItem = New ToolStripMenuItem()
+        REPORTToolStripMenuItem = New ToolStripMenuItem()
+        LOGOUTToolStripMenuItem = New ToolStripMenuItem()
+        CLOSEToolStripMenuItem = New ToolStripMenuItem()
+        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Guna2BorderlessForm1
@@ -69,11 +77,14 @@ Partial Class Vendor
         Guna2TextBox4.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         Guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox4.FillColor = Color.FromArgb(CByte(94), CByte(197), CByte(126))
         Guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox4.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox4.ForeColor = Color.Black
         Guna2TextBox4.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox4.Location = New Point(534, 34)
+        Guna2TextBox4.Location = New Point(534, 100)
         Guna2TextBox4.Name = "Guna2TextBox4"
+        Guna2TextBox4.PlaceholderForeColor = Color.Black
         Guna2TextBox4.PlaceholderText = "Email"
         Guna2TextBox4.SelectedText = ""
         Guna2TextBox4.ShadowDecoration.CustomizableEdges = CustomizableEdges6
@@ -91,11 +102,14 @@ Partial Class Vendor
         Guna2TextBox3.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         Guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox3.FillColor = Color.FromArgb(CByte(94), CByte(197), CByte(126))
         Guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox3.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox3.ForeColor = Color.Black
         Guna2TextBox3.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox3.Location = New Point(36, 34)
+        Guna2TextBox3.Location = New Point(21, 100)
         Guna2TextBox3.Name = "Guna2TextBox3"
+        Guna2TextBox3.PlaceholderForeColor = Color.Black
         Guna2TextBox3.PlaceholderText = "Vendor Name"
         Guna2TextBox3.SelectedText = ""
         Guna2TextBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges8
@@ -117,7 +131,7 @@ Partial Class Vendor
         Guna2GradientButton1.FillColor2 = Color.FromArgb(CByte(52), CByte(117), CByte(113))
         Guna2GradientButton1.Font = New Font("Segoe UI", 9F)
         Guna2GradientButton1.ForeColor = Color.White
-        Guna2GradientButton1.Location = New Point(575, 100)
+        Guna2GradientButton1.Location = New Point(575, 161)
         Guna2GradientButton1.Name = "Guna2GradientButton1"
         Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientButton1.Size = New Size(159, 40)
@@ -135,11 +149,14 @@ Partial Class Vendor
         Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox2.FillColor = Color.FromArgb(CByte(94), CByte(197), CByte(126))
         Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox2.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox2.ForeColor = Color.Black
         Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(36, 100)
+        Guna2TextBox2.Location = New Point(21, 161)
         Guna2TextBox2.Name = "Guna2TextBox2"
+        Guna2TextBox2.PlaceholderForeColor = Color.Black
         Guna2TextBox2.PlaceholderText = "Address"
         Guna2TextBox2.SelectedText = ""
         Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
@@ -157,11 +174,14 @@ Partial Class Vendor
         Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.FillColor = Color.FromArgb(CByte(94), CByte(197), CByte(126))
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.Font = New Font("Segoe UI", 9F)
+        Guna2TextBox1.ForeColor = Color.Black
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(278, 34)
+        Guna2TextBox1.Location = New Point(284, 100)
         Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PlaceholderForeColor = Color.Black
         Guna2TextBox1.PlaceholderText = "Vendor Contact Number"
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges14
@@ -180,7 +200,8 @@ Partial Class Vendor
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Guna2DataGridView1.ColumnHeadersHeight = 40
+        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
@@ -206,8 +227,8 @@ Partial Class Vendor
         Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
         Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
         Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 40
         Guna2DataGridView1.ThemeStyle.ReadOnly = False
         Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White
         Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
@@ -261,12 +282,57 @@ Partial Class Vendor
         Guna2GradientButton3.TabIndex = 25
         Guna2GradientButton3.Text = "Save Data"
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {PRODUCTToolStripMenuItem, REPORTToolStripMenuItem, LOGOUTToolStripMenuItem, CLOSEToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(769, 24)
+        MenuStrip1.TabIndex = 26
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' PRODUCTToolStripMenuItem
+        ' 
+        PRODUCTToolStripMenuItem.Name = "PRODUCTToolStripMenuItem"
+        PRODUCTToolStripMenuItem.Size = New Size(73, 20)
+        PRODUCTToolStripMenuItem.Text = "PRODUCT"
+        ' 
+        ' REPORTToolStripMenuItem
+        ' 
+        REPORTToolStripMenuItem.Name = "REPORTToolStripMenuItem"
+        REPORTToolStripMenuItem.Size = New Size(61, 20)
+        REPORTToolStripMenuItem.Text = "REPORT"
+        ' 
+        ' LOGOUTToolStripMenuItem
+        ' 
+        LOGOUTToolStripMenuItem.Name = "LOGOUTToolStripMenuItem"
+        LOGOUTToolStripMenuItem.Size = New Size(66, 20)
+        LOGOUTToolStripMenuItem.Text = "LOGOUT"
+        ' 
+        ' CLOSEToolStripMenuItem
+        ' 
+        CLOSEToolStripMenuItem.Name = "CLOSEToolStripMenuItem"
+        CLOSEToolStripMenuItem.Size = New Size(54, 20)
+        CLOSEToolStripMenuItem.Text = "CLOSE"
+        ' 
+        ' Guna2HtmlLabel3
+        ' 
+        Guna2HtmlLabel3.BackColor = Color.FromArgb(CByte(94), CByte(197), CByte(126))
+        Guna2HtmlLabel3.Font = New Font("Felix Titling", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel3.Location = New Point(311, 27)
+        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Guna2HtmlLabel3.Size = New Size(152, 40)
+        Guna2HtmlLabel3.TabIndex = 34
+        Guna2HtmlLabel3.Text = "Vendor"
+        ' 
         ' Vendor
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.Untitled_design
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(769, 418)
+        Controls.Add(Guna2HtmlLabel3)
         Controls.Add(Guna2GradientButton3)
         Controls.Add(Guna2GradientButton2)
         Controls.Add(Guna2DataGridView1)
@@ -275,11 +341,17 @@ Partial Class Vendor
         Controls.Add(Guna2GradientButton1)
         Controls.Add(Guna2TextBox2)
         Controls.Add(Guna2TextBox1)
+        Controls.Add(MenuStrip1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.None
+        MainMenuStrip = MenuStrip1
         Name = "Vendor"
         Text = "Vendor"
         CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
@@ -291,4 +363,10 @@ Partial Class Vendor
     Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2GradientButton3 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents PRODUCTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents REPORTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LOGOUTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CLOSEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
